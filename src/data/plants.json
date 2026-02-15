@@ -1,0 +1,77 @@
+[
+  {
+    "id": "1",
+    "name": "Tulsi Plant (Holy Basil)",
+    "description": "Sacred spiritual plant for home. Known for its medicinal properties, religious significance, and positive energy. Brings peace and prosperity.",
+    "price": 299,
+    "category": "Indoor",
+    "stock": 10,
+    "careLevel": "Easy",
+    "images": [
+      "https://images.pexels.com/photos/4750270/pexels-photo-4750270.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.unsplash.com/photo-1628016876299-72535e6dfbcf?w=600&fit=crop"
+    ],
+    "rating": 4.9,
+    "benefits": ["Spiritual significance", "Medicinal properties", "Positive energy", "Air purification"]
+  },
+  {
+    "id": "2",
+    "name": "Money Plant",
+    "description": "Lucky plant believed to bring prosperity and positive energy. Easy to grow in water or soil.",
+    "price": 249,
+    "category": "Indoor",
+    "stock": 20,
+    "careLevel": "Easy",
+    "images": ["https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=600&fit=crop"],
+    "rating": 4.7,
+    "benefits": ["Good luck charm", "Air purification", "Easy propagation", "Brings wealth"]
+  },
+  {
+    "id": "3",
+    "name": "Jade Plant",
+    "description": "Symbol of success and good fortune. Brings financial growth and positive energy.",
+    "price": 399,
+    "category": "Succulents",
+    "stock": 12,
+    "careLevel": "Easy",
+    "images": ["https://images.unsplash.com/photo-1459156212016-c812468e2115?w=600&fit=crop"],
+    "rating": 4.8,
+    "benefits": ["Success symbol", "Low maintenance", "Long lasting", "Prosperity"]
+  },
+  {
+    "id": "4",
+    "name": "Lucky Bamboo",
+    "description": "Brings good luck, prosperity and career growth. Perfect for home and office.",
+    "price": 349,
+    "category": "Indoor",
+    "stock": 18,
+    "careLevel": "Easy",
+    "images": ["https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=600&fit=crop"],
+    "rating": 4.9,
+    "benefits": ["Good luck", "Career growth", "Prosperity", "Positive vibes"]
+  },
+  {
+    "id": "5",
+    "name": "Peace Lily",
+    "description": "Symbol of peace and harmony. Elegant flowering plant that purifies air.",
+    "price": 499,
+    "category": "Flowering",
+    "stock": 8,
+    "careLevel": "Medium",
+    "images": ["https://images.unsplash.com/photo-1593784991095-a205069470b6?w=600&fit=crop"],
+    "rating": 4.8,
+    "benefits": ["Air purification", "Peace and harmony", "Beautiful flowers", "Low light tolerant"]
+  },
+  {
+    "id": "6",
+    "name": "Aloe Vera",
+    "description": "Medicinal plant with healing properties. Perfect for skin care and air purification.",
+    "price": 199,
+    "category": "Succulents",
+    "stock": 15,
+    "careLevel": "Easy",
+    "images": ["https://images.unsplash.com/photo-1596547609652-27e0fb57d32c?w=600&fit=crop"],
+    "rating": 4.6,
+    "benefits": ["Skin healing", "Medicinal uses", "Air purification", "Easy care"]
+  }
+]
