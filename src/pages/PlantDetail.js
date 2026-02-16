@@ -7,9 +7,19 @@ import { sendWhatsAppOrder, formatPrice, generateStars } from '../utils/helpers'
 const PlantDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { plants } = usePlants();
-  const plant = plants.find((p) => p.id === id);
+  const { plants, loading } = usePlants();
+  
+  // Handle both _id (backend) and id (local)
+  const plant = plants.find((p) => p._id === id || p.id === id);
   const [selectedImage, setSelectedImage] = useState(0);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50 flex items-center justify-center">
+        <div className="text-2xl font-bold text-primary">Loading plant details...</div>
+      </div>
+    );
+  }
 
   if (!plant) {
     return (

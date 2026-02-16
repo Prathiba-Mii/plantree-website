@@ -5,7 +5,7 @@ import { usePlants } from '../context/PlantsContext';
 import { formatPrice, isValidImageUrl } from '../utils/helpers';
 
 const AdminPanel = () => {
-  const { plants, addPlant, updatePlant, deletePlant, adminLogout, showToast } = usePlants();
+  const { plants, addPlant, updatePlant, deletePlant, adminLogout, showToast, loading } = usePlants();
   const navigate = useNavigate();
   
   const [showForm, setShowForm] = useState(false);
@@ -77,7 +77,7 @@ const AdminPanel = () => {
     setFormData({ ...formData, benefits: newBenefits });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Validate images
@@ -106,15 +106,17 @@ const AdminPanel = () => {
       rating: parseFloat(formData.rating),
     };
 
-    if (editingPlant) {
-      updatePlant(editingPlant.id, plantData);
-      showToast('Plant updated successfully! ✅', 'success');
-    } else {
-      addPlant(plantData);
-      showToast('Plant added successfully! 🌱', 'success');
+    try {
+      if (editingPlant) {
+        // Backend uses _id
+        await updatePlant(editingPlant._id || editingPlant.id, plantData);
+      } else {
+        await addPlant(plantData);
+      }
+      resetForm();
+    } catch (error) {
+      console.error('Error saving plant:', error);
     }
-
-    resetForm();
   };
 
   const handleEdit = (plant) => {
@@ -133,10 +135,13 @@ const AdminPanel = () => {
     setShowForm(true);
   };
 
-  const handleDelete = (id) => {
-    deletePlant(id);
-    showToast('Plant deleted successfully! 🗑️', 'success');
-    setDeleteConfirm(null);
+  const handleDelete = async (id) => {
+    try {
+      await deletePlant(id);
+      setDeleteConfirm(null);
+    } catch (error) {
+      console.error('Error deleting plant:', error);
+    }
   };
 
   const handleLogout = () => {
@@ -148,8 +153,16 @@ const AdminPanel = () => {
   // Dashboard Stats
   const totalPlants = plants.length;
   const totalStock = plants.reduce((sum, p) => sum + p.stock, 0);
-  const avgRating = (plants.reduce((sum, p) => sum + p.rating, 0) / plants.length).toFixed(1);
+  const avgRating = totalPlants > 0 ? (plants.reduce((sum, p) => sum + p.rating, 0) / plants.length).toFixed(1) : '0.0';
   const categories = [...new Set(plants.map(p => p.category))].length;
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 flex items-center justify-center">
+        <div className="text-2xl font-bold text-primary">Loading plants...</div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-12">
@@ -449,7 +462,7 @@ const AdminPanel = () => {
             <div className="space-y-4">
               {plants.map((plant) => (
                 <div
-                  key={plant.id}
+                  key={plant._id || plant.id}
                   className="flex items-center justify-between p-4 border-2 border-gray-100 rounded-xl hover:border-primary transition-all"
                 >
                   <div className="flex items-center space-x-4">
@@ -474,7 +487,7 @@ const AdminPanel = () => {
                       <span>Edit</span>
                     </button>
                     <button
-                      onClick={() => setDeleteConfirm(plant.id)}
+                      onClick={() => setDeleteConfirm(plant._id || plant.id)}
                       className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-all flex items-center space-x-2"
                     >
                       <FaTrash />

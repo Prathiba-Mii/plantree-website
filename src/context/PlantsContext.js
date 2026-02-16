@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import initialPlants from '../data/plants.json';
+import { fetchPlants, addPlant as apiAddPlant, updatePlant as apiUpdatePlant, deletePlant as apiDeletePlant } from '../utils/api';
 
 const PlantsContext = createContext();
 
@@ -12,45 +12,68 @@ export const usePlants = () => {
 };
 
 export const PlantsProvider = ({ children }) => {
-  // Initialize plants from localStorage or use initial data
-  const [plants, setPlants] = useState(() => {
-    const savedPlants = localStorage.getItem('plants');
-    return savedPlants ? JSON.parse(savedPlants) : initialPlants;
-  });
-
-  // Admin authentication state
+  const [plants, setPlants] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [isAdmin, setIsAdmin] = useState(() => {
     return localStorage.getItem('isAdmin') === 'true';
   });
 
-  // Save plants to localStorage whenever they change
+  // Fetch plants from backend on mount
   useEffect(() => {
-    localStorage.setItem('plants', JSON.stringify(plants));
-  }, [plants]);
+    loadPlants();
+  }, []);
+
+  const loadPlants = async () => {
+    setLoading(true);
+    try {
+      const data = await fetchPlants();
+      setPlants(data);
+    } catch (error) {
+      console.error('Failed to load plants:', error);
+      showToast('Failed to load plants', 'error');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   // Add a new plant
-  const addPlant = (plantData) => {
-    const newPlant = {
-      ...plantData,
-      id: Date.now().toString(), // Generate unique ID
-    };
-    setPlants([...plants, newPlant]);
-    return newPlant;
+  const addPlant = async (plantData) => {
+    try {
+      const newPlant = await apiAddPlant(plantData);
+      setPlants([...plants, newPlant]);
+      showToast('Plant added successfully! 🌱', 'success');
+      return newPlant;
+    } catch (error) {
+      showToast('Failed to add plant', 'error');
+      throw error;
+    }
   };
 
   // Update an existing plant
-  const updatePlant = (id, updatedData) => {
-    setPlants(plants.map(plant => 
-      plant.id === id ? { ...plant, ...updatedData } : plant
-    ));
+  const updatePlant = async (id, updatedData) => {
+    try {
+      const updated = await apiUpdatePlant(id, updatedData);
+      setPlants(plants.map(plant => plant._id === id ? updated : plant));
+      showToast('Plant updated successfully! ✅', 'success');
+    } catch (error) {
+      showToast('Failed to update plant', 'error');
+      throw error;
+    }
   };
 
   // Delete a plant
-  const deletePlant = (id) => {
-    setPlants(plants.filter(plant => plant.id !== id));
+  const deletePlant = async (id) => {
+    try {
+      await apiDeletePlant(id);
+      setPlants(plants.filter(plant => plant._id !== id));
+      showToast('Plant deleted successfully! 🗑️', 'success');
+    } catch (error) {
+      showToast('Failed to delete plant', 'error');
+      throw error;
+    }
   };
 
-  // Admin login - PASSWORD YAHAN HAI! 🔐
+  // Admin login
   const adminLogin = (password) => {
     if (password === 'Chutki@1234') {
       setIsAdmin(true);
@@ -66,7 +89,7 @@ export const PlantsProvider = ({ children }) => {
     localStorage.removeItem('isAdmin');
   };
 
-  // Show toast notification
+  // Toast notification
   const [toast, setToast] = useState(null);
 
   const showToast = (message, type = 'success') => {
@@ -76,6 +99,7 @@ export const PlantsProvider = ({ children }) => {
 
   const value = {
     plants,
+    loading,
     addPlant,
     updatePlant,
     deletePlant,
@@ -84,6 +108,7 @@ export const PlantsProvider = ({ children }) => {
     adminLogout,
     showToast,
     toast,
+    refreshPlants: loadPlants,
   };
 
   return (
