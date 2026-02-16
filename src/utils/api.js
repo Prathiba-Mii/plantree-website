@@ -6,7 +6,10 @@ export const fetchPlants = async () => {
     const response = await fetch(`${API_BASE_URL}/plants`);
     if (!response.ok) throw new Error('Failed to fetch plants');
     const data = await response.json();
-    return data;
+    
+    // Backend returns { success: true, plants: [...] }
+    // We need just the plants array
+    return data.plants || [];
   } catch (error) {
     console.error('Error fetching plants:', error);
     return [];
@@ -24,7 +27,10 @@ export const addPlant = async (plantData) => {
       body: JSON.stringify(plantData),
     });
     if (!response.ok) throw new Error('Failed to add plant');
-    return await response.json();
+    const data = await response.json();
+    
+    // Backend returns { success: true, plant: {...} }
+    return data.plant || data;
   } catch (error) {
     console.error('Error adding plant:', error);
     throw error;
@@ -42,7 +48,10 @@ export const updatePlant = async (id, plantData) => {
       body: JSON.stringify(plantData),
     });
     if (!response.ok) throw new Error('Failed to update plant');
-    return await response.json();
+    const data = await response.json();
+    
+    // Backend returns { success: true, plant: {...} }
+    return data.plant || data;
   } catch (error) {
     console.error('Error updating plant:', error);
     throw error;
@@ -56,7 +65,9 @@ export const deletePlant = async (id) => {
       method: 'DELETE',
     });
     if (!response.ok) throw new Error('Failed to delete plant');
-    return await response.json();
+    const data = await response.json();
+    
+    return data;
   } catch (error) {
     console.error('Error deleting plant:', error);
     throw error;
