@@ -2,16 +2,13 @@
   {
     "id": "1",
     "name": "Tulsi Plant (Holy Basil)",
-    "description": "Sacred spiritual plant for home. Known for its medicinal properties, religious significance, and positive energy. Brings peace and prosperity.",
+    "description": "Sacred spiritual plant for home. Known for its medicinal properties, religious significance, and positive energy.",
     "price": 299,
     "category": "Indoor",
     "stock": 10,
     "careLevel": "Easy",
-    "images": [
-      "https://images.pexels.com/photos/4750270/pexels-photo-4750270.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "https://images.unsplash.com/photo-1628016876299-72535e6dfbcf?w=600&fit=crop"
-    ],
-    "rating": 4.9,
+    "images": ["https://media.istockphoto.com/id/843955686/photo/thai-holy-basil-flowering-shining-over-dark-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=hivhq5iXi7Z7-aB0vsJXgpiWftyl44_cBdgxExdl25w="],
+    "rating": 4.5,
     "benefits": ["Spiritual significance", "Medicinal properties", "Positive energy", "Air purification"]
   },
   {
@@ -22,7 +19,7 @@
     "category": "Indoor",
     "stock": 20,
     "careLevel": "Easy",
-    "images": ["https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=600&fit=crop"],
+    "images": ["https://media.istockphoto.com/id/2170686151/photo/pothos-houseplant-in-a-flower-pot-epipremnum-aureum.webp?a=1&b=1&s=612x612&w=0&k=20&c=ikXRDt_3YsoIDTF9c32tO6ElF3asPzNMA9cyd_gxC-g="],
     "rating": 4.7,
     "benefits": ["Good luck charm", "Air purification", "Easy propagation", "Brings wealth"]
   },
@@ -34,7 +31,7 @@
     "category": "Succulents",
     "stock": 12,
     "careLevel": "Easy",
-    "images": ["https://images.unsplash.com/photo-1459156212016-c812468e2115?w=600&fit=crop"],
+    "images": ["https://images.unsplash.com/photo-1616189597001-9046fce2594d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amFkZSUyMHBsYW50fGVufDB8fDB8fHww"],
     "rating": 4.8,
     "benefits": ["Success symbol", "Low maintenance", "Long lasting", "Prosperity"]
   },
@@ -46,7 +43,7 @@
     "category": "Indoor",
     "stock": 18,
     "careLevel": "Easy",
-    "images": ["https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=600&fit=crop"],
+    "images": ["https://media.istockphoto.com/id/534456534/photo/bamboo-forest.webp?a=1&b=1&s=612x612&w=0&k=20&c=w6rzJs-_OwM2jB7Jfhu2aGRBm9hefOg-QQj89mVN4Ac="],
     "rating": 4.9,
     "benefits": ["Good luck", "Career growth", "Prosperity", "Positive vibes"]
   },
@@ -58,7 +55,7 @@
     "category": "Flowering",
     "stock": 8,
     "careLevel": "Medium",
-    "images": ["https://images.unsplash.com/photo-1593784991095-a205069470b6?w=600&fit=crop"],
+    "images": ["https://images.unsplash.com/photo-1652892342350-f907023f2406?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fExpbHl8ZW58MHx8MHx8fDA%3D"],
     "rating": 4.8,
     "benefits": ["Air purification", "Peace and harmony", "Beautiful flowers", "Low light tolerant"]
   },
@@ -70,8 +67,176 @@
     "category": "Succulents",
     "stock": 15,
     "careLevel": "Easy",
-    "images": ["https://images.unsplash.com/photo-1596547609652-27e0fb57d32c?w=600&fit=crop"],
+    "images": ["https://images.unsplash.com/photo-1683149987617-074429bcd8f2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YWxvZXZlcmElMjBwbGFudHxlbnwwfHwwfHx8MA%3D%3D"],
     "rating": 4.6,
     "benefits": ["Skin healing", "Medicinal uses", "Air purification", "Easy care"]
+  },
+  {
+    "id": "7",
+    "name": "Rose Plant (Gulab)",
+    "description": "Classic flowering plant with beautiful fragrant roses. Perfect for gardens and gifting. Multiple colors available.",
+    "price": 399,
+    "category": "Flowering",
+    "stock": 20,
+    "careLevel": "Medium",
+    "images": ["https://images.unsplash.com/photo-1535846660354-f998ee0797e3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cm9zZSUyMHBsYW50fGVufDB8fDB8fHww"],
+    "rating": 4.7,
+    "benefits": ["Beautiful flowers", "Fragrance", "Gift option", "Garden decoration"]
+  },
+  {
+    "id": "8",
+    "name": "Hibiscus (Gudhal)",
+    "description": "Popular flowering plant with large colorful blooms. Used in worship and hair care. Easy to maintain.",
+    "price": 349,
+    "category": "Flowering",
+    "stock": 18,
+    "careLevel": "Easy",
+    "images": ["https://images.unsplash.com/photo-1567991722999-74f27f53f33a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8SGliaXNjdXN8ZW58MHx8MHx8fDA%3D"],
+    "rating": 4.6,
+    "benefits": ["Vibrant flowers", "Hair care", "Medicinal uses", "Low maintenance"]
+  },
+  {
+    "id": "9",
+    "name": "Curry Leaf Plant (Kadipatta)",
+    "description": "Essential Indian herb plant! Fresh curry leaves for cooking. Every kitchen garden must-have.",
+    "price": 299,
+    "category": "Herbs",
+    "stock": 22,
+    "careLevel": "Medium",
+    "images": ["https://images.unsplash.com/photo-1718734243130-a455d504be3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q3VycnklMjBMZWFmJTIwUGxhbnR8ZW58MHx8MHx8fDA%3D"],
+    "rating": 4.8,
+    "benefits": ["Fresh curry leaves", "Medicinal properties", "Cooking essential", "Aromatic"]
+  },
+  {
+    "id": "10",
+    "name": "Jasmine (Mogra)",
+    "description": "Highly fragrant white flowering plant. Used in worship, perfumes, and hair decoration. Very popular!",
+    "price": 399,
+    "category": "Flowering",
+    "stock": 15,
+    "careLevel": "Medium",
+    "images": ["https://images.unsplash.com/photo-1638967174304-698e96f543f3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8SmFzbWluZXxlbnwwfHwwfHx8MA%3D%3D"],
+    "rating": 4.9,
+    "benefits": ["Heavenly fragrance", "Religious significance", "Beautiful flowers", "Decorative"]
+  },
+  {
+    "id": "11",
+    "name": "Marigold (Genda Phool)",
+    "description": "Auspicious flowering plant used in festivals and worship. Bright orange/yellow flowers. Easy to grow.",
+    "price": 199,
+    "category": "Flowering",
+    "stock": 25,
+    "careLevel": "Easy",
+    "images": ["https://images.unsplash.com/photo-1696569386118-ad11f08ba013?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fE1hcmlnb2xkfGVufDB8fDB8fHww"],
+    "rating": 4.5,
+    "benefits": ["Festival decoration", "Worship use", "Pest repellent", "Colorful blooms"]
+  },
+  {
+    "id": "12",
+    "name": "Bougainvillea",
+    "description": "Stunning flowering climber. Vibrant pink, purple, orange blooms. Perfect for gardens and balconies.",
+    "price": 549,
+    "category": "Outdoor",
+    "stock": 8,
+    "careLevel": "Medium",
+    "images": ["https://images.unsplash.com/photo-1705174673506-fbf038a0b79e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fEJvdWdhaW52aWxsZWF8ZW58MHx8MHx8fDA%3D"],
+    "rating": 4.8,
+    "benefits": ["Stunning colors", "Long flowering", "Climber plant", "Garden decoration"]
+  },
+  {
+    "id": "13",
+    "name": "Snake Plant (Sansevieria)",
+    "description": "Air purifying superstar! Releases oxygen at night. Perfect for bedrooms. Extremely low maintenance.",
+    "price": 399,
+    "category": "Indoor",
+    "stock": 20,
+    "careLevel": "Easy",
+    "images": ["https://images.unsplash.com/photo-1687552212914-03a30c82053c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c25ha2UlMjBwbGFudHxlbnwwfHwwfHx8MA%3D%3D"],
+    "rating": 4.8,
+    "benefits": ["Oxygen at night", "Air purification", "Removes toxins", "Very hardy"]
+  },
+{
+    "id": "14",
+    "name": "Spider Plant",
+    "description": "Easy-care hanging plant. Great for beginners. Excellent air purifier. Pet-safe!",
+    "price": 299,
+    "category": "Indoor",
+    "stock": 15,
+    "careLevel": "Easy",
+    "images": ["https://images.unsplash.com/photo-1611527664689-d430dd2a6774?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8U3BpZGVyJTIwUGxhbnR8ZW58MHx8MHx8fDA%3D"],
+    "rating": 4.5,
+    "benefits": ["Pet safe", "Air purification", "Easy propagation", "Hanging basket"]
+  },
+  {
+    "id": "15",
+    "name": "Rubber Plant (Ficus)",
+    "description": "Popular indoor tree plant. Large glossy leaves. Great air purifier. Makes bold statement.",
+    "price": 599,
+    "category": "Indoor",
+    "stock": 8,
+    "careLevel": "Easy",
+    "images": ["https://images.unsplash.com/photo-1669392597221-bbfd4b6e13ff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UnViYmVyJTIwUGxhbnR8ZW58MHx8MHx8fDA%3D"],
+    "rating": 4.7,
+    "benefits": ["Air purification", "Low maintenance", "Large leaves", "Statement plant"]
+  },
+  {
+    "id": "16",
+    "name": "Areca Palm",
+    "description": "Best air purifying plant. Adds tropical feel. Perfect for living rooms. NASA recommended.",
+    "price": 799,
+    "category": "Indoor",
+    "stock": 6,
+    "careLevel": "Medium",
+    "images": ["https://images.unsplash.com/photo-1709215992319-e10ecbbe3c98?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QXJlY2ElMjBQYWxtfGVufDB8fDB8fHww"],
+    "rating": 4.9,
+    "benefits": ["Top air purifier", "Humidifier", "Tropical look", "Non-toxic"]
+  },
+  {
+    "id": "17",
+    "name": "Mint Plant (Pudina)",
+    "description": "Fresh mint leaves for tea, chutney, and cooking. Easy to grow. Very useful herb!",
+    "price": 149,
+    "category": "Herbs",
+    "stock": 30,
+    "careLevel": "Easy",
+    "images": ["https://images.unsplash.com/photo-1715543707087-2cd9dd91d3f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8TWludCUyMFBsYW50fGVufDB8fDB8fHww"],
+    "rating": 4.6,
+    "benefits": ["Fresh mint", "Digestive aid", "Cooking herb", "Fast growing"]
+  },
+  {
+    "id": "18",
+    "name": "Coriander Plant (Dhania)",
+    "description": "Fresh coriander leaves at home! Essential Indian cooking herb. Easy to grow in pots.",
+    "price": 149,
+    "category": "Herbs",
+    "stock": 25,
+    "careLevel": "Easy",
+    "images": ["https://images.unsplash.com/photo-1723810315254-e189f1294bff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fENvcmlhbmRlciUyMFBsYW50fGVufDB8fDB8fHww"],
+    "rating": 4.5,
+    "benefits": ["Fresh leaves", "Cooking essential", "Seeds for spices", "Quick harvest"]
+  },
+  {
+    "id": "19",
+    "name": "Boston Fern",
+    "description": "Lush green hanging plant. Excellent humidifier. Perfect for bathrooms. Air purifying.",
+    "price": 449,
+    "category": "Indoor",
+    "stock": 10,
+    "careLevel": "Medium",
+    "images": ["https://images.unsplash.com/photo-1610491536492-cee9f12c860f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Qm9zdG9uJTIwRmVybnxlbnwwfHwwfHx8MA%3D%3D"],
+    "rating": 4.6,
+    "benefits": ["Natural humidifier", "Air purification", "Lush foliage", "Hanging option"]
+  },
+  {
+    "id": "20",
+    "name": "Croton Plant",
+    "description": "Colorful indoor plant with vibrant leaves. Adds color to any space. Easy to maintain.",
+    "price": 499,
+    "category": "Indoor",
+    "stock": 12,
+    "careLevel": "Easy",
+    "images": ["https://images.unsplash.com/photo-1657082137451-e87168c5fa3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Q3JvdG9uJTIwUGxhbnR8ZW58MHx8MHx8fDA%3D"],
+    "rating": 4.7,
+    "benefits": ["Colorful foliage", "Air purification", "Low maintenance", "Decorative"]
   }
 ]
